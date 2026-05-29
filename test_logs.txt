@@ -1,0 +1,53 @@
+[2024-11-15 09:23:17] [INFO] [auth] User "admin" logged in from 192.168.1.10 (session_id: abc123)
+[2024-11-15 09:25:42] [DEBUG] [db] Connection pool status: active=5, idle=3, max=10
+[2024-11-15 09:31:05] [WARNING] [cache] Redis connection unstable, reconnecting in 5s (attempt 1/3)
+[2024-11-15 09:33:28] [ERROR] [api] POST /api/v1/logs returned 500: Internal Server Error (trace_id: 4f8a2b)
+[2024-11-15 09:45:11] [INFO] [scheduler] Daily cleanup job started at 09:45:11
+[2024-11-16 10:02:34] [INFO] [auth] User "support_team" logged in from 10.0.0.45
+[2024-11-16 10:15:22] [WARNING] [storage] Disk usage on /var/logs: 92% (threshold: 85%)
+[2024-11-16 10:28:49] [ERROR] [parser] Failed to parse line 482: invalid timestamp format "2024-13-01"
+[2024-11-16 10:41:03] [DEBUG] [search] Index rebuild started, current entries: 15,234
+[2024-11-16 10:55:37] [INFO] [export] User "admin" exported 2,543 logs to CSV (size: 1.2MB)
+[2024-11-17 11:05:19] [ERROR] [network] Connection refused to logstash:5044 (retrying in 30s)
+[2024-11-17 11:19:44] [WARNING] [auth] Failed login attempt for user "root" from 203.0.113.89 (invalid password)
+[2024-11-17 11:33:51] [INFO] [app] Log aggregation service started, listening on port 8080
+[2024-11-17 11:47:28] [DEBUG] [filter] Applied filters: level>=WARNING, date>2024-11-10, source=app
+[2024-11-17 12:01:15] [INFO] [db] Vacuum completed on logs_table, reclaimed 45MB
+[2024-11-18 12:15:33] [WARNING] [api] Slow request detected: GET /api/search took 4.2s (threshold: 2s)
+[2024-11-18 12:29:57] [ERROR] [storage] Corrupt log segment detected at offset 0x1F4A, rotating file
+[2024-11-18 12:44:22] [INFO] [auth] User "monitoring" logged in via API key (key_id: mon_2024)
+[2024-11-18 13:02:48] [DEBUG] [cache] Cache hit ratio: 78.3% (last hour: 2,134 hits, 592 misses)
+[2024-11-18 13:18:14] [INFO] [search] Search completed: "ERROR database" found 127 matches in 0.23s
+[2024-11-19 13:31:29] [ERROR] [file] Cannot open /var/logs/audit/audit.log: Permission denied (EACCES)
+[2024-11-19 13:45:53] [WARNING] [memory] Java heap usage: 3.2GB/4GB (80%), triggering GC
+[2024-11-19 14:00:17] [INFO] [scheduler] Hourly stats aggregated: 1,234 INFO, 89 WARNING, 23 ERROR
+[2024-11-19 14:15:41] [DEBUG] [network] Websocket connection opened for live feed (client_id: ws_8932)
+[2024-11-19 14:30:05] [INFO] [app] Configuration reloaded from /etc/logviewer/config.yaml (version: 1.2.3)
+[2024-11-20 14:44:29] [ERROR] [db] Connection lost to postgres://logs.internal:5432 (timeout: 30s)
+[2024-11-20 14:59:13] [WARNING] [api] Rate limit exceeded for client 198.51.100.77 (limit: 1000 req/min)
+[2024-11-20 15:13:47] [INFO] [storage] Log rotation triggered: current log size 512MB, archiving...
+[2024-11-20 15:28:22] [DEBUG] [parser] Detected log format: Common Log Format (Apache style)
+[2024-11-20 15:42:56] [INFO] [auth] User "deploy" performed sudo to root (command: systemctl restart)
+[2024-11-21 15:57:31] [ERROR] [search] Elasticsearch query failed: shard failure (reason: too many buckets)
+[2024-11-21 16:12:05] [WARNING] [cache] Memcached server 10.0.0.12:11211 is down, failing over
+[2024-11-21 16:26:39] [INFO] [export] Scheduled report generated: "Weekly Error Summary" (recipients: team@example.com)
+[2024-11-21 16:41:14] [DEBUG] [ui] User interface event: filter_changed -> levels: [ERROR, FATAL]
+[2024-11-21 16:55:48] [INFO] [db] Index "idx_timestamp" created on logs (duration: 12.3s, size: 89MB)
+[2024-11-22 17:10:22] [ERROR] [auth] JWT token validation failed for user=service_account (expired)
+[2024-11-22 17:25:07] [WARNING] [system] File descriptor limit reached (current: 1024, max: 4096)
+[2024-11-22 17:39:41] [INFO] [scheduler] Backup completed: /backups/logs_2024-11-22.tar.gz (size: 2.1GB)
+[2024-11-22 17:54:26] [DEBUG] [cache] Lua script executed on Redis: cas_token_validation (duration: 0.8ms)
+[2024-11-22 18:08:50] [INFO] [api] New endpoint registered: DELETE /api/v1/logs/{id} (requires admin)
+[2024-11-23 18:23:35] [ERROR] [file] Log file /app/logs/error.log is empty (expected at least header)
+[2024-11-23 18:37:19] [WARNING] [db] Long-running query detected (PID: 28943, duration: 45s, query: "SELECT * FROM logs")
+[2024-11-23 18:52:03] [INFO] [auth] Multi-factor authentication enabled for user "admin" (method: TOTP)
+[2024-11-23 19:06:48] [DEBUG] [network] TLS handshake completed with client: cipher=TLS_AES_256_GCM_SHA384
+[2024-11-23 19:21:32] [INFO] [app] Graceful shutdown initiated (signal: SIGTERM), flushing buffers...
+[2024-11-23 19:36:17] [ERROR] [storage] Write-ahead log replay failed at LSN 0/3A2F1C8, database inconsistent
+[2024-11-24 10:05:44] [WARNING] [scheduler] Missed scheduled job "hourly_cleanup" due to previous crash
+[2024-11-24 10:20:19] [INFO] [db] Replica sync lag reduced to 1.2s (previously: 8.7s)
+[2024-11-24 10:35:53] [DEBUG] [parser] Multiline log detected, merging 3 lines into single event
+[2024-11-24 10:51:28] [INFO] [api] API version deprecated: v1 will be removed on 2025-01-01, migrate to v2
+[2024-11-24 11:06:12] [ERROR] [network] DNS resolution failed for logs-collector.internal: NXDOMAIN
+[2024-11-24 11:20:47] [WARNING] [auth] Suspicious activity detected: 5 failed logins from same IP in 60s
+[2024-11-24 11:35:21] [INFO] [export] Data export completed: 12,847 rows to S3 (bucket: logs-archive)
